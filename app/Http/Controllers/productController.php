@@ -56,6 +56,39 @@ class productController extends Controller
         $products = add_product::all();
         return view('product.manage_product', ['products' => $products]);
     }
+
+    public function productDelete($id){
+        $row=add_product::find($id);
+        if($row){
+            $row->delete();
+            return redirect('/product/manage');
+        }
+    }
+    public function productEdit($id){
+        $row=add_product::find($id);
+        $cat=add_category::all();
+        $bra=add_brand::all();
+        return view('product.product_edit',['product'=>$row,'category' =>$cat,'brand'=>$bra]);
+    }
+    public function UpdateProduct(Request $request){
+        $row=add_product::find($request->id);
+        if($row) {
+            $Image = $request->file('product_image');
+            $name = $Image->getClientOriginalName();
+            $directory = 'product_images/';
+            $url = $directory . $name;
+            $Image->move($directory, $name);
+        }
+            $row->product_name = $request->product_name;
+            $row->product_price = $request->product_price;
+            $row->product_quantity = $request->product_quantity;
+            $row->product_description = $request->product_description;
+            $row->long_description = $request->long_description;
+            $row->product_image = $url;
+            $row->save();
+            return redirect('/product/manage');
+
+    }
     public function product_detail($id){
         $products=add_product::find($id);
         Session::put('product_name',$products->product_name);

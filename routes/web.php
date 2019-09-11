@@ -78,6 +78,18 @@ Route::get('/product/manage',[
     'uses' =>'productController@manage_product',
     'as' =>'manage_product'
 ]);
+Route::get('/product/Delete/{id}',[
+    'uses' =>'productController@productDelete',
+    'as' =>'productDelete'
+]);
+Route::get('/product/edit/{id}',[
+    'uses' =>'productController@productEdit',
+    'as' =>'productEdit'
+]);
+Route::post('/product/Update',[
+    'uses' =>'productController@UpdateProduct',
+    'as' =>'UpdateProduct'
+]);
 
 
 Route::get('/product/detail/{id}',[
@@ -154,6 +166,10 @@ Route::get('/customer/logins',[
 Route::post('/customer/loginCheck',[
     'uses' =>'customerController@loginCheck',
     'as' =>'loginCheck'
+]);
+Route::get('producs/Info/{name}',[
+    'uses' =>'customerController@GetProduct',
+    'as' =>'GetProduct'
 ]);
 
 Auth::routes();

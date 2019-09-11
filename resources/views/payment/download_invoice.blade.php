@@ -39,7 +39,6 @@
                 <th scope="col">id</th>
                 <th scope="col">product-name</th>
                 <th scope="col">product-price</th>
-                <th scope="col">product-quantity</th>
                 <th>total price</th>
 
                 @php($i=1)
@@ -49,7 +48,6 @@
                 <td>{{$i++}}</td>
                 <td>{{Session::get('product_name')}}</td>
                 <td>{{Session::get('product_price')}}</td>
-                <td>{{Session::get('product_quantity')}}</td>
                 <td>{{$total=Session::get('product_price')}}</td>
 
             </tr>

@@ -16,6 +16,7 @@ class CreateAddCategoriesTable extends Migration
         Schema::create('add_categories', function (Blueprint $table) {
             $table->Increments('id');
             $table->string('category_name');
+           // $table->string('brand_name');
             $table->string('category_description');
             $table->string('long_description');
             $table->timestamps();

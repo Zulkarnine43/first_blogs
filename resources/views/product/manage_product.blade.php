@@ -33,8 +33,8 @@
                                 <td>{{$product->long_description}}</td>
                                 <td>{{$product->product_image}}</td>
                                 <td>
-                                    <a href="" class="glyphicon-edit btn-dark">edit</a>
-                                    <a href="" class="glyphicon-trash btn-success">delete</a>
+                                    <a href="{{route('productEdit',['id' =>$product->id])}}" class="glyphicon-edit btn-dark">edit</a>
+                                    <a href="{{route('productDelete',['id' =>$product->id])}}" class="glyphicon-trash btn-success">delete</a>
                                 </td>
                             </tr>
                         @endforeach
