@@ -2,7 +2,7 @@
 @extends('admin.headerFooter');
 @section('body')
 
-                        <h3>Shipping Info goes here.....</h3>
+                        <h3 class="col-md-offset-3 col-md-4 text-success">Shipping Info goes here.....</h3>
                     <form action="{{route('fromSubmit')}}" method="POST" class="form-right">
                         @csrf
 
@@ -11,32 +11,31 @@
                             <div class="login">
                                 <div class="main-agileits">
                                     <div class="form-w3agile form1">
-                                        <h3>Register</h3>
                                         <div class="key">
                                             <i class="fa fa-user" aria-hidden="true"></i>
-                                            <input  type="text" class="input-lg float-lg-right" name="fullname" value="" placeholder="fullname" >
+                                            <input class="col-md-offset-3 col-md-4 text-center"  type="text" class="input-lg float-lg-right" name="fullname" value="" placeholder="fullname" >
 
                                             <div class="clearfix"></div>
                                         </div>
 
                                         <div class="key">
                                             <i class="fa fa-user" aria-hidden="true"></i>
-                                            <input  type="text" class="input-lg" name="email" value=""  placeholder="email">
+                                            <input class="col-md-offset-3 col-md-4 text-center"  type="text" class="input-lg" name="email" value=""  placeholder="email">
                                             <div class="clearfix"></div>
                                         </div>
 
                                         <div class="key">
                                             <i class="fa fa-envelope" aria-hidden="true"></i>
-                                            <input  type="text" class="input-lg" name="phone_number" placeholder=" phone_number">
+                                            <input class="col-md-offset-3 col-md-4 text-center"  type="text" class="input-lg" name="phone_number" placeholder=" phone_number">
                                             <div class="clearfix"></div>
                                         </div>
                                         <div class="key">
                                             <i class="fa fa-envelope" aria-hidden="true"></i>
-                                            <input  type="text" class="input-lg" name="address" placeholder="address">
+                                            <input class="col-md-offset-3 col-md-4 text-center"  type="text" class="input-lg" name="address" placeholder="address">
                                             <div class="clearfix"></div>
                                         </div>
 
-                                        <input class="text-success" type="submit" name="btn" value="Submit">
+                                        <input class="col-md-offset-3 col-md-4 text-center text-gray-900"  type="submit" name="btn" value="Submit">
                                     </div>
 
                                 </div>

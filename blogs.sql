@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 08, 2019 at 09:00 PM
+-- Generation Time: Sep 11, 2019 at 02:06 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -118,11 +118,10 @@ CREATE TABLE `add_products` (
 --
 
 INSERT INTO `add_products` (`id`, `category_name`, `brand_name`, `product_name`, `product_price`, `product_quantity`, `product_description`, `long_description`, `product_image`, `created_at`, `updated_at`) VALUES
-(12, '2', '5', 'book', '23', '1', 'new brands', 'Very  good', 'product_images/images.jpg', '2019-09-08 07:56:14', '2019-09-08 07:56:14'),
-(13, '3', '7', 'T_shirt', '50', '1', 'new brands', 'For Customer....', 'product_images/avatar.png', '2019-09-08 08:24:02', '2019-09-08 08:24:02'),
-(14, '5', '16', 'Hk-12', '5000', '1', 'new brands', 'For Customer', 'product_images/photo-431119_640.jpg', '2019-09-08 09:30:21', '2019-09-08 09:30:21'),
-(15, '5', '15', 'smart-watch', '500', '1', 'new brands', 'For Customer......', 'product_images/smart-watch-821557_640.jpg', '2019-09-08 09:31:45', '2019-09-08 09:31:45'),
-(16, '5', '14', 'XAOMI-NOTE7', '21000', '1', 'new brands', 'For Customer......', 'product_images/thumb_182846_default_big.jpeg', '2019-09-08 09:32:32', '2019-09-08 09:32:32');
+(19, '3', '7', 'T_shirt', '4567', '1', 'new brands', 'For Consumer....', 'product_images/mw2.png', '2019-09-09 12:31:21', '2019-09-09 12:31:21'),
+(20, '3', '9', 'T_shirt', '4567', '1', 'new brands', 'For Consumer....', 'product_images/a2.png', '2019-09-09 12:32:49', '2019-09-09 12:32:49'),
+(22, '3', '7', 'Shirt', '555', '1', 'new brands', 'cust', 'product_images/a8.png', '2019-09-09 14:27:49', '2019-09-09 14:27:49'),
+(23, '4', '7', 'Shirt', '568', '1', 'new brands', 'cust', 'product_images/a7.png', '2019-09-09 14:29:28', '2019-09-09 14:29:28');
 
 -- --------------------------------------------------------
 
@@ -229,7 +228,15 @@ CREATE TABLE `register_saves` (
 --
 
 INSERT INTO `register_saves` (`id`, `username`, `email`, `password`, `confirm_password`, `created_at`, `updated_at`) VALUES
-(1, 'zulkarnine', 'zulkarnine43@gmail.com', '12345678', '12345678', '2019-09-08 11:29:24', '2019-09-08 11:29:24');
+(1, 'zulkarnine', 'zulkarnine43@gmail.com', '12345678', '12345678', '2019-09-08 11:29:24', '2019-09-08 11:29:24'),
+(4, 'nine1', 'zulkarnine43@gmail.com', '12345678', '12345678', '2019-09-09 10:42:39', '2019-09-09 10:42:39'),
+(5, 'nine1', 'zulkarnine43@gmail.com', '12345678', '12345678', '2019-09-09 10:48:36', '2019-09-09 10:48:36'),
+(6, 'nine1', 'zulkarnine43@gmail.com', '12345678', '12345678', '2019-09-09 10:49:23', '2019-09-09 10:49:23'),
+(7, 'nine1', 'zulkarnine43@gmail.com', '12345678', '12345678', '2019-09-09 10:54:48', '2019-09-09 10:54:48'),
+(8, 'nine1', 'zulkarnine43@gmail.com', '12345678', '12345678', '2019-09-09 10:59:55', '2019-09-09 10:59:55'),
+(9, 'nine1', 'zulkarnine43@gmail.com', '12345678', '12345678', '2019-09-09 11:02:42', '2019-09-09 11:02:42'),
+(10, 'nine1', 'zulkarnine43@gmail.com', '12345678', '12345678', '2019-09-09 11:09:46', '2019-09-09 11:09:46'),
+(11, 'nine1', 'zulkarnine43@gmail.com', '12345678', '12345678', '2019-09-09 11:15:12', '2019-09-09 11:15:12');
 
 -- --------------------------------------------------------
 
@@ -267,7 +274,11 @@ INSERT INTO `shopping_forms` (`id`, `fullname`, `email`, `phone_number`, `addres
 (17, 'zulkarnine', 'zulkarnine43@gmail.com', '8801869084620', 'kolabagan,Dhaka', '2019-09-08 04:51:41', '2019-09-08 04:51:41'),
 (18, 'zulkarnine', 'admin@blogs.com', '8801869084620', 'kolabagan,Dhaka', '2019-09-08 08:25:01', '2019-09-08 08:25:01'),
 (19, 'zulkarnine', 'admin@blogs.com', '8801869084620', 'kolabagan,Dhaka', '2019-09-08 09:46:40', '2019-09-08 09:46:40'),
-(20, 'zulkarnine', 'zulkarnine43@gmail.com', '8801869084620', 'Dhaka', '2019-09-08 12:59:21', '2019-09-08 12:59:21');
+(20, 'zulkarnine', 'zulkarnine43@gmail.com', '8801869084620', 'Dhaka', '2019-09-08 12:59:21', '2019-09-08 12:59:21'),
+(21, 'zulkarnine', 'zulkarnine43@gmail.com', '8801869084620', 'Dhaka', '2019-09-09 08:21:16', '2019-09-09 08:21:16'),
+(22, 'shaon', 'admin@blogs.com', '01976524652', 'kolabagan,Dhaka', '2019-09-09 12:00:20', '2019-09-09 12:00:20'),
+(23, 'shaon', 'zns601@gmail.com', '123456', 'Dhaka', '2019-09-09 14:30:18', '2019-09-09 14:30:18'),
+(24, 'sajid', 'admin@blogs.com', '8801869084620', 'kolabagan,Dhaka', '2019-09-11 05:57:34', '2019-09-11 05:57:34');
 
 -- --------------------------------------------------------
 
@@ -390,7 +401,7 @@ ALTER TABLE `add_categories`
 -- AUTO_INCREMENT for table `add_products`
 --
 ALTER TABLE `add_products`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `checkout_registers`
@@ -414,13 +425,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `register_saves`
 --
 ALTER TABLE `register_saves`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `shopping_forms`
 --
 ALTER TABLE `shopping_forms`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `users`

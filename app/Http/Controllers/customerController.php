@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\add_product;
 use App\register_save;
 use Illuminate\Http\Request;
 use Session;
 use Check;
+use Mail;
 
 class customerController extends Controller
 {
@@ -23,6 +25,13 @@ class customerController extends Controller
         $regis->password = $request->password;
         $regis->confirm_password = $request->confirm_password;
         $regis->save();
+        Session::put('username',$regis->username);
+        $data =$regis->toArray();
+
+            Mail::send('customer.verification_register',$data,function ($message) use  ($data) {
+           $message->to($data['email']);
+           $message->subject('verification_register');
+            });
 
         return redirect('/customer/logins')->with('message', 'register Successfully......login now');
 
@@ -49,5 +58,10 @@ class customerController extends Controller
             return redirect('/customer/logins')->with('message', 'required valid password');
         }
     }
+   /* public function GetProduct($name){
+        $product=add_product::find($name);
+
+        return view('product.product_info',['products'=>$product]);
+    }*/
 
 }

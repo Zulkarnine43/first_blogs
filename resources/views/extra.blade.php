@@ -79,3 +79,41 @@
     </div>
 </form>
 <hr/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav menu__list">
+
+        <li class="active menu__item menu__item--current"><a class="menu__link" href="{{route('index')}}">Home <span class="sr-only">(current)</span></a></li>
+        @foreach($categorys as $category)
+            <li class="dropdown menu__item">
+                <a href="{{route('GetProduct',['name' =>$category->category_name])}}" class="dropdown-toggle menu__link"  role="button" >{{$category->category_name}} <span class="caret"></span></a>
+            </li>
+        @endforeach
+        <li class=" menu__item"><a class="menu__link" href="{{route('electronic')}}">Electronics</a></li>
+        <li class=" menu__item"><a class="menu__link" href="contact.html">contact</a></li>
+    </ul>
+
+</div>

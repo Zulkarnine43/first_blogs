@@ -84,7 +84,7 @@
                     <li>Vat <i>-</i> <span>Tk 0.0</span></li>
                     <li>Total<i>-</i> <span>TK.{{$shipping->product_price}}</span></li>
                 </ul>
-                <h1><a href="{{route('shippingForm',['id'=>$shipping->id])}}" class=" text-success">check</a></h1>
+                <h1><a href="{{route('shippingForm',['id'=>$shipping->id])}}" class="text-success col-md-offset-3 ">check</a></h1>
             </div>
             <div class="clearfix"> </div>
 

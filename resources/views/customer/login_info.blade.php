@@ -5,29 +5,31 @@
         <div class="login">
             <div class="main-agileits">
                 <div class="form-w3agile">
-                    <h3 >Login If you register already</h3>
+                    <h3  class="col-md-offset-3 col-md-4 text-center text-success">Login If you register already</h3>
                     <h3>{{Session::get('message')}}</h3>
 
                     <form action="{{route('loginCheck')}}" method="POST">
                         @csrf
                         <div class="key">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
-                            <input  type="text" value="Email" name="email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+                            <input class="col-md-offset-3 col-md-4 text-center"  type="text" value="" name="email" placeholder="Email">
                             <div class="clearfix"></div>
                         </div>
                         <div class="key">
                             <i class="fa fa-lock" aria-hidden="true"></i>
-                            <input  type="password" value="Password" name="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
+                            <input  class="col-md-offset-3 col-md-4 text-center" type="password" value="" name="password" placeholder="Password">
                             <div class="clearfix"></div>
                         </div>
-                        <input type="submit" name="btn" value="Login">
+                        <input class="col-md-offset-3 col-md-4 text-center text-success" type="submit" name="btn" value="Login">
                     </form>
                 </div>
-                <div class="forg">
+
+                <div class="float-right">
                     <a href="#" class="forg-left">Forgot Password</a>
                     <a href="registered.html" class="forg-right">Register</a>
                     <div class="clearfix"></div>
                 </div>
+
             </div>
         </div>
         <!--login-->
